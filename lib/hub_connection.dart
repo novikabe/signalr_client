@@ -494,7 +494,7 @@ class HubConnection {
   InvocationMessage _createInvocation(
       String methodName, List<Object> args, bool nonblocking) {
     if (nonblocking) {
-      return InvocationMessage(methodName, args, MessageHeaders(), null);
+      return InvocationMessage(methodName, args, MessageHeaders(), 0);
     } else {
       final id = _id++;
       return InvocationMessage(
